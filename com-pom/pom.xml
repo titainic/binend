@@ -37,6 +37,8 @@
         <commons-fileupload.version>1.3.1</commons-fileupload.version>
         <jackson-core-asl.version>1.9.10</jackson-core-asl.version>
         <jackson-mapper-asl.version>1.9.10</jackson-mapper-asl.version>
+        <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+        <org.json.version>20141113</org.json.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -44,6 +46,16 @@
 
 <dependencyManagement>
     <dependencies>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>${org.json.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${javax.servlet-api.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
