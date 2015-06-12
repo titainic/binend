@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+ <link href="../bower_components/bootstrap-toggle-master/css/bootstrap-toggle.min.css" rel="stylesheet">
+ <link href="../bower_components/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
+                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="javascript:;">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:;">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:;">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="javascript:;">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
+                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="javascript:;">
+                                <div>
+                                    <p>
+                                        <strong>Task 1</strong>
+                                        <span class="pull-right text-muted">40% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:;">
+                                <div>
+                                    <p>
+                                        <strong>Task 2</strong>
+                                        <span class="pull-right text-muted">20% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:;">
+                                <div>
+                                    <p>
+                                        <strong>Task 3</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:;">
+                                <div>
+                                    <p>
+                                        <strong>Task 4</strong>
+                                        <span class="pull-right text-muted">80% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="javascript:;">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
+                        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="javascript:;">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:;">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:;">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:;">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:;">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="javascript:;">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="javascript:;"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="javascript:;"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                    
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="flot.html">Flot Charts</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Morris.js Charts</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                        </li>
+                        <li>
+                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="panels-wells.html">Panels and Wells</a>
+                                </li>
+                                <li>
+                                    <a href="buttons.html">Buttons</a>
+                                </li>
+                                <li>
+                                    <a href="notifications.html">Notifications</a>
+                                </li>
+                                <li>
+                                    <a href="typography.html">Typography</a>
+                                </li>
+                                <li>
+                                    <a href="icons.html"> Icons</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grid</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="javascript:;"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="javascript:;">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Third Level <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="javascript:;">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">Third Level Item</a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="javascript:;"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">直播管理</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            直播列表
+                        </div>
+                        <input type="hidden" id="liveState" value="1"/>
+                          <div class="col-lg-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                           		搜索条件	
+                        </div>
+                        <div class="panel-body">
+                          <input type="checkbox" id="orderBytime" checked data-toggle="toggle" data-on="时间排序" data-off="取消时间排序"  data-onstyle="success" data-offstyle="warning" >
+                            <input type="checkbox" id="orderByAudiences" checked data-toggle="toggle" data-on="人数排序" data-off="取消人数排序"  data-onstyle="success"  data-offstyle="warning" >
+                            <input type="checkbox" id="liveOrder" checked data-toggle="toggle" data-on="查询置顶" data-off="取消查询置顶"   data-offstyle="warning" >
+                            
+					<input size="16" type="text" readonly class="form_datetime" style="margin-top:40px;"> 直播开始时间              
+					
+					 </div>
+                     
+                        <div class="panel-footer">
+                           		<span style="color:green;"><span style="margin:0 15px 0 20px;">*</span>排序方式可以影响用户界面的显示</span>	
+                        </div>
+                    </div>
+                </div>
+                            
+                                  
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="dataTable_wrapper">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>直播标题</th>
+                                            <th>发布者昵称</th>
+                                            <th>发布者ID</th>
+                                            <th>直播描述</th>
+                                            <th>赞</th>
+                                            <th>分享</th>
+                                            <th>观看人数</th>	
+                                            <th>订阅</th>	
+                                            <th>其他操作</th>	
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody id="dataBody">
+                                        <tr class="odd gradeA">
+                                            <td class="center edit" ><div name="liveTitle" id="liveTitle_xxxxx">三里屯脱衣舞</div></td>
+                                            <td class="center edit"><div name="nickName" id="nickName_xxxxx">哦哦哦诗人</div></td>
+                                            <td class="center edit" ><div name="userId" id="userId_xxxxx">admin</div></td>
+                                            <td class="center edit" ><div name="describe" id="describe_xxxxx">你懂得</div></td>
+                                            <td class="center edit" ><div name="likes" id="likes_xxxxx">9999</div></td>
+                                            <td class="center edit" ><div name="shares" id="shares_xxxxx">88888</div></td>
+                                            <td class="center edit" ><div name="liveAudiences" id="liveAudiences_xxxx">77777</div></td>
+                                            <td class="center edit" ><div name="liveSubscibes" id="liveSubscibes_xxxx">77777</div></td>
+                                            <td class="center">
+                                           <!-- <button type="button" class="btn btn-primary">置顶</button> -->
+                                          <input type="checkbox" name="liveOrder" id="liveOrder_xxxxx" checked data-toggle="toggle" data-on="人工置顶" data-off="取消置顶"   data-offstyle="warning">
+                                           <button type="button" class="btn btn-info">观看直播</button>
+                                            <button type="button" class="btn btn-default" id="terminate_1">强行终止</button>
+											<input type="hidden"  name="liveId" value="xxxxx"/>
+                                            </td>
+                                        </tr>
+                                     
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                            <div class="well">
+                                <h4>DataTables Usage Information</h4>
+                                <p>DataTables is a very flexible, advanced tables plugin for jQuery. In SB Admin, we are using a specialized version of DataTables built for Bootstrap 3. We have also customized the table headings to use Font Awesome icons in place of images. For complete documentation on DataTables, visit their website at <a target="_blank" href="https://datatables.net/">https://datatables.net/</a>.</p>
+                                <a class="btn btn-default btn-lg btn-block" target="_blank" href="https://datatables.net/">View DataTables Documentation</a>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Kitchen Sink
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Basic Table
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Striped Rows
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Bordered Table
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive table-bordered">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Hover Rows
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Context Classes
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="success">
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr class="info">
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr class="warning">
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                        <tr class="danger">
+                                            <td>4</td>
+                                            <td>John</td>
+                                            <td>Smith</td>
+                                            <td>@jsmith</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="../bower_components/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+    <script src="../bower_components\tuupola-jquery_jeditable-2e6cceb\jquery.jeditable.js"></script>
+   
+<script src="../bower_components/bootstrap-toggle-master/js/bootstrap-toggle.min.js"></script>
+    <script src="../bower_components/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../bower_components/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    (function($){
+		$.fn.serializeJson=function(){
+		var serializeObj={};
+		var array=this.serializeArray();
+		var str=this.serialize();
+		$(array).each(function(){
+		if(serializeObj[this.name]){
+		if($.isArray(serializeObj[this.name])){
+		serializeObj[this.name].push(this.value);
+		}else{
+		serializeObj[this.name]=[serializeObj[this.name],this.value];
+		}
+		}else{
+		serializeObj[this.name]=this.value;
+		}
+		});
+		return serializeObj;
+		};
+	})(jQuery);
+    
+    
+    $(document).ready(function() {
+    var tb =   $('#dataTables-example').DataTable({
+    			 "sAjaxSource": "http://127.0.0.1:8080/com-admin/managetLive/queryParam.do",
+                responsive: true,
+                bStateSave: true,
+                sServerMethod:"post",
+         		 "oLanguage": {
+                	"sLengthMenu": "每页显示 _MENU_ 条记录",
+                	"sZeroRecords": "抱歉， 没有找到",
+                	"sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+                	"sInfoEmpty": "没有数据",
+                	"sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+                	"oPaginate": {
+                	"sFirst": "首页",
+                	"sPrevious": "前一页",
+                	"sNext": "后一页",
+                	"sLast": "尾页"
+                	},
+                	"sZeroRecords": "没有检索到数据",
+                	"sProcessing": "<img src='./loading.gif' />"
+                	} ,
+                	"fnServerParams":function(aoData){
+                		//console.log('$("#liveOrder").val() :' + $("#liveOrder").val());
+                		aoData.push(
+                				{"name":"liveState","value":$("#liveState").val()},
+                				{"name":"nickName","value":""},
+                				{"name":"liveOrder","value":($("#liveOrder").val()=='on'?"0":"1")},
+                				{"name":"liveCreated","value":$(".form_datetime").val()}
+                				);
+                	},
+                	"aoColumnDefs":[
+                	              {"render":function(td,type,data){
+									return '<div name="liveTitle" id="liveTitle_'+data.liveId+'">'+data.liveTitle+'</div>';               	            	  
+                	              }},
+                	              {"render":function(td,type,data){
+  									return '<div name="nickName" id="nickName_'+data.liveId+'">'+data.liveNickName+'</div>';               	            	  
+                  	              }},
+                  	            {"render":function(td,type,data){
+									return '<div name="userId" id="userId_'+data.liveId+'">'+data.liveUserId+'</div>';               	            	  
+                	              }},
+                	              {"render":function(td,type,data){
+  									return '<div name="describe" id="describe_'+data.liveId+'">'+data.liveDescribe+'</div>';               	            	  
+                  	              }},
+                  	            {"render":function(td,type,data){
+									return '<div name="likes" id="likes_'+data.liveId+'">'+data.liveLikes+'</div>';               	            	  
+                	              }},
+                	              {"render":function(td,type,data){
+  									return '<div name="shares" id="shares_'+data.liveId+'">'+data.liveShares+'</div>';               	            	  
+                  	              }},
+                  	            {"render":function(td,type,data){
+									return '<div name="liveAudiences" id="liveAudiences_'+data.liveId+'">'+data.liveAudiences+'</div>';               	            	  
+                	              }},
+                	              {"render":function(td,type,data){
+  									return '<div name="liveSubscibes" id="liveSubscibes_'+data.liveId+'">'+data.liveSubscibes+'</div></td>';               	            	  
+                  	              }},
+                  	            {"render":function(td,type,data){
+                  	            	var checked = "checked";
+                  	            	if(data.liveOrder == "1"){
+                  	            		checked = "";
+                  	            	}
+									var html ='<input type="checkbox" name="liveOrder" id="liveOrder_'+data.liveId+'" '+checked+' data-toggle="toggle" data-on="人工置顶" data-off="取消置顶"   data-offstyle="warning">';     
+									html += '<button type="button" class="btn btn-info">观看直播</button>';
+									html += '<input type="hidden"  name="liveId" value="'+data.liveId+'"/>';
+									return html;
+                	              }}
+                	              ]
+          	             
+        });
+    	
+    	
+    	/* 
+     	   	var searchObj = {};
+        	searchObj.liveState = $("#liveState").val(); //直播状态
+        	searchObj.liveOrder = $("#liveOrder")?"0":"1"; //是否人工置顶
+        	//查询时间(开始时间)
+        	debugger
+        	tb.Rows().clear();
+    		$.ajax({
+    			url:"http://127.0.0.1:8080/com-admin/managetLive/queryParam.do",
+    			type:"post",
+    			dataType:"JSON",
+    			data:JSON.stringify(searchObj),
+    			success:function(datas){
+    				//var body = $("#dataBody");
+    				//body.empty();
+    				//增加一行
+    				for(var i=0,len=datas.length;i<len;i++){
+    					var data =  datas[i];
+    				
+    					var checked = "checked";
+    				if(data.liveOrder == "1"){
+    					checked ='';
+    				}	
+    					
+    				var html = '<tr class="odd gradeA">'+
+                       ' <td class="center edit" ><div name="liveTitle" id="liveTitle_'+data.liveId+'">'+data.title+'</div></td>'+
+                       ' <td class="center edit"><div name="nickName" id="nickName_'+data.liveId+'">'+data.nickName+'</div></td>'+
+                        '<td class="center edit" ><div name="userId" id="userId_'+data.liveId+'">'+data.userId+'</div></td>'+
+                        '<td class="center edit" ><div name="describe" id="describe_'+data.liveId+'">'+data.describe+'</div></td>'+
+                        '<td class="center edit" ><div name="likes" id="likes_'+data.liveId+'">'+data.likes+'</div></td>'+
+                        '<td class="center edit" ><div name="shares" id="shares_'+data.liveId+'">'+data.shares+'</div></td>'+
+                        '<td class="center edit" ><div name="liveAudiences" id="liveAudiences_'+data.liveId+'">'+data.audiences+'</div></td>'+
+                        '<td class="center edit" ><div name="liveSubscibes" id="liveSubscibes_'+data.liveId+'">'+data.subscibes+'</div></td>'+
+                        '<td class="center">'+
+                      '<input type="checkbox" name="liveOrder" id="liveOrder_'+data.liveId+'" '+checked+' data-toggle="toggle" data-on="人工置顶" data-off="取消置顶"   data-offstyle="warning">'+
+                       '<button type="button" class="btn btn-info">观看直播</button>'+
+                        '<button type="button" class="btn btn-default" name="terminate">强行终止</button>'+
+    					'<input type="hidden"  name="liveId" value="'+data.liveId+'"/>'+
+                        '</td>'+
+                   '</tr>';
+                   dataTable.fnAddData($(html));
+                  // $(html).appendTo(body);
+    				}
+    			},
+    			error:function(){
+    				alert("连接不到服务器");
+    			}
+    		}); */
+        
+        //修改 "http://192.168.1.140:8080/com-admin/managetLive/updateById.do"http://192.168.1.140:8080/com-admin/managetLive/updateById.do
+        $('.edit div').editable(function(value,settings){
+        	var data = {}; 
+        		var attr =  $(this).attr("name");
+        		var liveId = $(this).parent().siblings(":last").find("[name=liveId]").val();
+        		data[attr] = value;
+        		data.liveId = liveId;
+        		console.log(data);
+        	  $.ajax({
+        	        type: "POST",
+        	        url: "http://192.168.1.140:8080/com-admin/managetLive/updateById.do",
+        	        //contentType: "application/json; charset=utf-8",
+        	        data: JSON.stringify(data),
+        	       // dataType: "json",
+        	        success: function (message) {
+        	            if (message > 0) {
+        	                alert("请求已提交！我们会尽快与您取得联系");
+        	            }
+        	        },
+        	        error: function (message) {
+        	            $("#request-process-patent").html("提交数据失败！");
+        	        }
+        	    });
+	return(value);
+        	
+        }, {
+            indicator : 'Saving...',
+            cancel    : '取消',
+            submit    : '保存',
+            indicator : '<img src="../bower_components/tuupola-jquery_jeditable-2e6cceb/img/indicator.gif">',
+            tooltip   : '点击编辑',
+            //type    : 'autogrow',
+            id:"abc",
+            name:"abc",
+            callback:function(value,settings){
+            	/* console.log(value);
+            	console.log(settings); */
+            }
+            //style   : 'display: inline'
+        });
+        
+    });
+    
+    
+    //时间初始化
+    $(function(){
+    	$(".form_datetime").datetimepicker({
+    		format: 'yyyy-mm-dd',
+    		todayBtn:"linked",
+    	});
+    });
+    
+    
+   // 使用ajax源
+
+  /*   $(document).ready(function() {
+    $('#example').dataTable( {
+    "bProcessing": true,
+    "sAjaxSource": './arrays.txt'
+    } );
+    } ); */
+    
+ //  使用ajax，在服务器端整理数据
+
+    $(document).ready(function() {
+    $('#example').dataTable( {
+    "bProcessing": true,
+    "bServerSide": true,
+    "sPaginationType": "full_numbers",
+
+    "sAjaxSource": "./server_processing.php",
+    /*如果加上下面这段内容，则使用post方式传递数据
+    "fnServerData": function ( sSource, aoData, fnCallback ) {
+    $.ajax( {
+    "dataType": 'json',
+    "type": "POST",
+    "url": sSource,
+    "data": aoData,
+    "success": fnCallback
+    } );
+    }*/
+    "oLanguage": {
+    "sUrl": "cn.txt"
+    },
+    "aoColumns": [
+    { "sName": "platform" },
+    { "sName": "version" },
+    { "sName": "engine" },
+    { "sName": "browser" },
+    { "sName": "grade" }
+    ]//$_GET['sColumns']将接收到aoColumns传递数据
+    } );
+    } );
+    
+    //直播查询方法
+   $(function(){
+    
+   }); 
+    
+    
+    //测试
+/*     $(function(){
+  console.log('测试开始!!!!!!!!!');
+    var body = $("#dataBody");
+    for(var i=0;i<10;i++){
+    	var data = {}
+    	data.liveId = i;
+    	data.title = "title"+i;
+    	data.nickName = "name"+i;
+    	data.userId = "userId"+i;
+    	data.describe = "desc"+i;
+    	data.likes = "likes"+i;
+    	data.shares = "shares"+i;
+    	data.audiences = "audiences"+i;
+    	data.subscibes = "subscibes"+i;
+    	var checked = i%2==0?'checked':'';
+    	(function(){setTimeout(function(){
+    		var html = '<tr class="odd gradeA">'+
+            ' <td class="center edit" ><div name="liveTitle" id="liveTitle_'+data.liveId+'">'+data.title+'</div></td>'+
+            ' <td class="center edit"><div name="nickName" id="nickName_'+data.liveId+'">'+data.nickName+'</div></td>'+
+             '<td class="center edit" ><div name="userId" id="userId_'+data.liveId+'">'+data.userId+'</div></td>'+
+             '<td class="center edit" ><div name="describe" id="describe_'+data.liveId+'">'+data.describe+'</div></td>'+
+             '<td class="center edit" ><div name="likes" id="likes_'+data.liveId+'">'+data.likes+'</div></td>'+
+             '<td class="center edit" ><div name="shares" id="shares_'+data.liveId+'">'+data.shares+'</div></td>'+
+             '<td class="center edit" ><div name="liveAudiences" id="liveAudiences_'+data.liveId+'">'+data.audiences+'</div></td>'+
+             '<td class="center edit" ><div name="liveSubscibes" id="liveSubscibes_'+data.liveId+'">'+data.subscibes+'</div></td>'+
+             '<td class="center">'+
+           '<input type="checkbox" name="liveOrder" id="liveOrder_'+data.liveId+'" '+checked+' data-toggle="toggle" data-on="人工置顶" data-off="取消置顶"   data-offstyle="warning">'+
+            '<button type="button" class="btn btn-info">观看直播</button>'+
+             '<button type="button" class="btn btn-default" name="terminate">强行终止</button>'+
+				'<input type="hidden"  name="liveId" value="'+data.liveId+'"/>'+
+             '</td>'+
+        '</tr>';
+        console.log("这是第"+i+'次测试!!!!');
+        $(html).appendTo(body);   		
+    	},500);})(i)
+    }	  */
+    
+    
+    	/* $('#dataTables-example').dataTable( {
+    		        "aaData": [ */
+    		            /* Reduced data set */
+    		            /* [ "Trident", "Internet Explorer 4.0", "Win 95+", 4, "X" ,"123","123","123","123"],
+    		            [ "Trident", "Internet Explorer 5.0", "Win 95+", 5, "C"  ,"123","123","123","123"],
+    		            [ "Trident", "Internet Explorer 5.5", "Win 95+", 5.5, "A"  ,"123","123","123","123"],
+    		            [ "Trident", "Internet Explorer 6.0", "Win 98+", 6, "A" ],
+    		            [ "Trident", "Internet Explorer 7.0", "Win XP SP2+", 7, "A"  ,"123","123","123","123"],
+    		            [ "Gecko", "Firefox 1.5", "Win 98+ / OSX.2+", 1.8, "A" ,"123","123","123","123" ],
+    		            [ "Gecko", "Firefox 2", "Win 98+ / OSX.2+", 1.8, "A"  ,"123","123","123","123"],
+    		            [ "Gecko", "Firefox 3", "Win 2k+ / OSX.3+", 1.9, "A"  ,"123","123","123","123"],
+    		            [ "Webkit", "Safari 1.2", "OSX.3", 125.5, "A" ,"123","123","123","123" ],
+    		            [ "Webkit", "Safari 1.3", "OSX.3", 312.8, "A"  ,"123","123","123","123"],
+    		            [ "Webkit", "Safari 2.0", "OSX.4+", 419.3, "A"  ,"123","123","123","123"],
+    		            [ "Webkit", "Safari 3.0", "OSX.4+", 522.1, "A" ,"123","123","123","123" ]
+    		        ],
+    		        "aoColumns": [
+    		              		            { "sTitle": "直播标题" , "sClass": "center" },
+    		              		            { "sTitle": "发布者昵称", "sClass": "center"  },
+    		              		            { "sTitle": "发布者ID", "sClass": "center"  },
+    		              		            { "sTitle": "直播描述", "sClass": "center" },
+    		              		            {
+    		              		                "sTitle": "赞",
+    		              		                "sClass": "center",
+    		              		                "fnRender": function(obj) {
+    		              		                    var sReturn = obj.aData[ obj.iDataColumn ];
+    		              		                    if ( sReturn == "A" ) {
+    		              		                        sReturn = "<b>A</b>";
+    		              		                    }
+    		              		                    return sReturn;
+    		              		                }
+    		              		            },
+    		              		            { "sTitle": "分享", "sClass": "center" },
+    		              		            { "sTitle": "观看人数", "sClass": "center" },
+    		              		            { "sTitle": "订阅", "sClass": "center" },
+    		              		            { "sTitle": "其他操作", "sClass": "center" }
+    		              		        ]
+    		    } );    
+    
+    }); */
+    
+    </script>
+
+</body>
+
+</html>
