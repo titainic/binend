@@ -19,7 +19,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 后台在线视屏管理
@@ -90,8 +92,10 @@ public class ManageLiveController
             mb.setLiveOrder(liveOrder);
 
             List list =  manageLiveService.queryNikNameOrUserId(mb);
+            Map map = new HashMap();
+            map.put("aaData",list);
             Gson g = new Gson();
-            String result = g.toJson(list);
+            String result = g.toJson(map);
             log.info(result);
             return result;
         }
