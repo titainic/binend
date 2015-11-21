@@ -45,7 +45,7 @@
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/"></property>
-		<property name="suffix" value=""></property>
+		<property name="suffix" value=".jsp"></property>
 	</bean>
 	
 	<!-- 配置springMVC处理上传文件的信息 -->
@@ -59,7 +59,6 @@
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<import resource="classpath*:conf/spring/spring-web-service.xml" />
-
 	<context:property-placeholder location="classpath*:conf/db/*.properties" />
 
 </beans>

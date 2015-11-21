@@ -32,6 +32,8 @@
 		</property>
 	</bean>
 
+	<task:annotation-driven />
+
 	<!-- 启用AOP -->
 	<aop:aspectj-autoproxy proxy-target-class="true" />
 
@@ -41,20 +43,24 @@
 	<!-- 开启注解 -->
 	<mvc:annotation-driven />
 
-	<!-- 使用annotation定义事务 -->
-	<tx:annotation-driven transaction-manager="transactionManager" />
-
+	<!--视图解析 前置和后置  suffix =jsp 就返回jsp结尾的网页-->
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 
+	<!-- 配置springMVC处理上传文件的信息 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="utf-8" />
+		<property name="maxUploadSize" value="10485760000" />
+		<property name="maxInMemorySize" value="40960" />
+	</bean>
+
 	<!-- 使用annotation定义事务 -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<import resource="classpath*:spring/spring-admin-service.xml" />
-
 	<context:property-placeholder location="classpath*:conf/db/*.properties" />
 
 </beans>
