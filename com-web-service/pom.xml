@@ -20,6 +20,12 @@
     <dependencies>
 
         <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+
+        <dependency>
             <groupId>yang-bin</groupId>
             <artifactId>com-utils</artifactId>
         </dependency>
