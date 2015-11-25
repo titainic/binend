@@ -49,6 +49,11 @@
 
 <dependencyManagement>
     <dependencies>
+        <dependency>
+            <groupId>yang-bin</groupId>
+            <artifactId>com-quartz-cron</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
 
         <!-- quartz 依赖-->
