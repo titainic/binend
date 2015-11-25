@@ -18,7 +18,10 @@
 
 
     <dependencies>
-
+        <dependency>
+            <groupId>yang-bin</groupId>
+            <artifactId>com-quartz-cron</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>yang-bin</groupId>
