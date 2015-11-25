@@ -40,7 +40,8 @@
         <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
         <org.json.version>20141113</org.json.version>
         <mockito-all.version>1.10.19</mockito-all.version>
-        <quartz-scheduler>2.2.1</quartz-scheduler>
+        <quartz-scheduler.version>2.2.1</quartz-scheduler.version>
+
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -49,16 +50,18 @@
 <dependencyManagement>
     <dependencies>
 
+
+        <!-- quartz 依赖-->
         <dependency>
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz</artifactId>
-            <version>${quartz-scheduler}</version>
+            <version>${quartz-scheduler.version}</version>
         </dependency>
         <!-- quartz 依赖-->
         <dependency>
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz-jobs</artifactId>
-            <version>${quartz-scheduler}</version>
+            <version>${quartz-scheduler.version}</version>
         </dependency>
 
 
@@ -410,6 +413,7 @@
         <module>../com-web</module>
         <module>../com-web-inft</module>
         <module>../com-web-service</module>
+        <module>../com-quartz-cron</module>
     </modules>
 
     <build>
