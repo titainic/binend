@@ -12,7 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
+/**
+ * 定时调度 实现服务
+ */
 @Service
 public class QuartzService
 {
@@ -24,6 +26,7 @@ public class QuartzService
     {
         List<ScheduleJob> jobList  = new ArrayList<ScheduleJob>();
 
+        //此数据集也可从数据库获取
         for (int i = 0; i < 5; i++)
         {
             ScheduleJob job = new ScheduleJob();
@@ -33,7 +36,7 @@ public class QuartzService
             job.setJobStatus("1");
             job.setCronExpression("0/5 * * * * ?");
             job.setDesc("数据导入任务");
-            job.setJobClz("com.titanic.cron.QuartzJobFactory");
+            job.setJobClz("com.titanic.quartz.job.QuartzMyJob");
             jobList.add(job);
         }
 
