@@ -18,18 +18,7 @@
 
 
     <dependencies>
-        <!-- quartz 依赖-->
-        <dependency>
-            <groupId>org.quartz-scheduler</groupId>
-            <artifactId>quartz</artifactId>
 
-        </dependency>
-        <!-- quartz 依赖-->
-        <dependency>
-            <groupId>org.quartz-scheduler</groupId>
-            <artifactId>quartz-jobs</artifactId>
-
-        </dependency>
 
         <dependency>
             <groupId>yang-bin</groupId>
