@@ -7,7 +7,11 @@ import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 
 /**
- * Created by wb-yangbin.d on 2015/11/24.
+ * 自定义的job。
+ * 定时调度 学习网站
+ * http://www.dexcoder.com/selfly/article/308
+ * http://linhongyu.blog.51cto.com/6373370/1530148
+ *
  */
 //@DisallowConcurrentExecution
 public class QuartzMyJob implements Job
