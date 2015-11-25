@@ -1,7 +1,7 @@
 package com.titanic.quartz.bean;
 
 /**
- * Created by wb-yangbin.d on 2015/11/24.
+ *自定义Job与数据库映射的Bean
  */
 public class ScheduleJob
 {
