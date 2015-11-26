@@ -1,8 +1,15 @@
 package com.titanic.service;
 
+import org.springframework.stereotype.Service;
+
 /**
- * Created by titanic on 15-6-12.
+ * Test mock测试
  */
-public class DemoServiceImpl
+@Service
+public class DemoServiceImpl implements DemoService
 {
+    public void test()
+    {
+         System.out.println("sss");
+    }
 }
