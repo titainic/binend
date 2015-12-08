@@ -24,27 +24,33 @@ public class QuartzService
 
     public void execute()
     {
-        List<ScheduleJob> jobList  = new ArrayList<ScheduleJob>();
+//        List<ScheduleJob> jobList  = new ArrayList<ScheduleJob>();
 
         //此数据集也可从数据库获取
-        for (int i = 0; i < 5; i++)
-        {
-            ScheduleJob job = new ScheduleJob();
-            job.setJobId("10001" + i);
-            job.setJobName("data_import" + i);
-            job.setJobGroup("dataWork");
-            job.setJobStatus("1");
-            job.setCronExpression("0/5 * * * * ?");
-            job.setDesc("数据导入任务");
-            job.setJobClz("com.titanic.quartz.job.QuartzMyJob");
-            jobList.add(job);
-        }
+
+        ScheduleJob Producerjob = new ScheduleJob();
+        Producerjob.setJobId("10001" );
+        Producerjob.setJobName("queue.offer");
+        Producerjob.setJobGroup("queue");
+        Producerjob.setJobStatus("1");
+        Producerjob.setCronExpression("0/5 * * * * ?");
+        Producerjob.setDesc("数据导入任务");
+        Producerjob.setJobClz("com.titanic.quartz.job.ProducerQueueJob");
 
 
-        for(ScheduleJob job : jobList)
-        {
-            jobRun(job);
-        }
+        ScheduleJob ConsumerQueueJob =  new ScheduleJob();
+        ConsumerQueueJob.setJobId("10001" );
+        ConsumerQueueJob.setJobName("queue.take" );
+        ConsumerQueueJob.setJobGroup("queue");
+        ConsumerQueueJob.setJobStatus("1");
+        ConsumerQueueJob.setCronExpression("0/5 * * * * ?");
+        ConsumerQueueJob.setDesc("数据导入任务");
+        ConsumerQueueJob.setJobClz("com.titanic.quartz.job.ConsumerQueueJob");
+
+
+        jobRun(Producerjob);
+        jobRun(ConsumerQueueJob);
+
 
 
     }

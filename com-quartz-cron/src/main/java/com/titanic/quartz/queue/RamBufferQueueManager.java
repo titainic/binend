@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,45 +14,40 @@ import java.util.Map;
 @Component
 public class RamBufferQueueManager implements BufferQueueManager {
 
-	private static final Logger logger = LoggerFactory.getLogger("server");
-
-
 	private Map<String, RamQueue<String>> mapQueue = new HashMap<String, RamQueue<String>>();
 
-	private int queueSize ;
+	//队列大小
+	private int queueSize =10000;
 
-//	@PostConstruct
-//	public void initQueue() {
-//		int size = 10000;
-//		if (queueParam != null) {
-//			Map<String, Integer> queueMap = QueueUtils.parseQueueStr(queueParam.getQueueParam());
-//			for (Map.Entry<String, Integer> entry : queueMap.entrySet()) {
-//				createQueue(entry.getKey(), entry.getValue());
-//				size = entry.getValue();
-//			}
-//			queueSize =size;
-//		}
-//
-//	}
+	@PostConstruct
+	public void initQueue()
+	{
+		createQueue("RamBufferQueue", queueSize);
+	}
 
-	public RamQueue getQueue(String key) {
-		if (null == mapQueue.get(key)) {
+	public RamQueue getQueue(String key)
+	{
+		if (null == mapQueue.get(key))
+		{
 			createQueue(key, queueSize);
-			logger.error("没有标识为"+key+"的队列，创建一个标识为"+key+"的队列");
 		}
 		return mapQueue.get(key);
 	}
 
-	public boolean createQueue(String key, int queueSize) {
-		if (mapQueue.get(key) == null) {
+	public boolean createQueue(String key, int queueSize)
+	{
+		if (mapQueue.get(key) == null)
+		{
 			mapQueue.put(key, new RamQueue<String>(queueSize));
 			return true;
 		}
 		return false;
 	}
 
-	public boolean delQueue(String key) {
-		if (null != mapQueue.get(key)) {
+	public boolean delQueue(String key)
+	{
+		if (null != mapQueue.get(key))
+		{
 			mapQueue.remove(key);
 			return true;
 		}
