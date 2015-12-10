@@ -1,1 +1,67 @@
 http://blog.csdn.net/sadfishsc/article/details/47160213   logback实现
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="TBUS" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${tbus.log.root}/tbus.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${tbus.log.root}/tbus.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <MaxHistory>30</MaxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder" charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="SERVER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${tbus.log.root}/tbus-server.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${tbus.log.root}/tbus-server.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <MaxHistory>30</MaxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder" charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="SCHEDULE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${tbus.log.root}/tbus-schedule.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${tbus.log.root}/tbus-schedule.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <MaxHistory>30</MaxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder" charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender" >
+        <encoder>
+            <pattern>[%-5level] %d{HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <logger name="server"  additivity="false">
+        <level value="${tbus.log.level}"/>
+        <appender-ref ref="SERVER"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <logger name="schedule" additivity="false">
+        <level value="${tbus.log.level}"/>
+        <appender-ref ref="SCHEDULE"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <root>
+        <level value="${tbus.log.level}"/>
+        <appender-ref ref="TBUS"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
