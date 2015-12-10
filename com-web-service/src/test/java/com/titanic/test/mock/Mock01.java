@@ -15,6 +15,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 /**
+ *    mock 测试 http://examples.javacodegeeks.com/core-java/mockito/mockito-void-method-example/
  * mock测试
  */
 public class Mock01 extends TestBase
