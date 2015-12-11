@@ -1,6 +1,7 @@
 
 package com.titanic.test.base;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -15,6 +16,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration({ "classpath*:spring/test/spring-web-service-test.xml"})
 public class TestBase
 {
+
+    @Test
+    public void test()
+    {
+        System.out.println("TestBase");
+    }
 
 }
 

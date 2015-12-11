@@ -4,7 +4,7 @@
         <artifactId>com-pom</artifactId>
         <groupId>yang-bin</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../com-admin/pom.xml</relativePath>
+        <relativePath>../com-pom/pom.xml</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -15,7 +15,7 @@
     <packaging>jar</packaging>
 
     <name>com-camel-esb</name>
-    <url>http://maven.apache.org</url>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,8 +34,8 @@
             <version>2.16.1</version>
         </dependency>
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
         </dependency>
 
     </dependencies>
