@@ -18,8 +18,8 @@ public class ConsumerQueueJob implements Job
 {
     Logger log = Logger.getLogger(this.getClass());
 
-    @Resource
-    RamBufferQueueManager ramBufferQueueManager;
+
+    RamBufferQueueManager ramBufferQueueManager = RamBufferQueueManager.getInstance();
 
 
     public void execute(JobExecutionContext context) throws JobExecutionException
@@ -36,7 +36,7 @@ public class ConsumerQueueJob implements Job
             {
                 e.printStackTrace();
             }
-            log.info("queue.take()" + " - " + str);
+            log.info("queue.take()" + " - "+str + Thread.currentThread().getName()+"--"+queue.getSize());
         }
     }
 }

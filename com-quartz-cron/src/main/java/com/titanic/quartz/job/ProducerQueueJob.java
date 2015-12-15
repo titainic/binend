@@ -18,8 +18,7 @@ public class ProducerQueueJob implements Job
 {
     Logger log = Logger.getLogger(this.getClass());
 
-    @Resource
-    RamBufferQueueManager ramBufferQueueManager;
+    RamBufferQueueManager ramBufferQueueManager = RamBufferQueueManager.getInstance();
 
     public void execute(JobExecutionContext context) throws JobExecutionException
     {
@@ -30,6 +29,6 @@ public class ProducerQueueJob implements Job
         {
             queue.offer(x + " - "+System.currentTimeMillis());
         }
-        log.info("queue.offer 100 个数据完成");
+        log.info("queue.offer 100 个数据完成"+queue.getSize());
     }
 }

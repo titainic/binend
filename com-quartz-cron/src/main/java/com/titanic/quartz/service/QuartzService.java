@@ -2,14 +2,11 @@ package com.titanic.quartz.service;
 
 import com.titanic.quartz.bean.ScheduleJob;
 import org.quartz.*;
-import org.quartz.Scheduler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-
-import java.util.List;
+import javax.annotation.Resource;
 
 
 /**
@@ -33,7 +30,7 @@ public class QuartzService
         Producerjob.setJobName("queue.offer");
         Producerjob.setJobGroup("queue");
         Producerjob.setJobStatus("1");
-        Producerjob.setCronExpression("0/5 * * * * ?");
+        Producerjob.setCronExpression("0/3 * * * * ?");
         Producerjob.setDesc("数据导入任务");
         Producerjob.setJobClz("com.titanic.quartz.job.ProducerQueueJob");
 
@@ -47,9 +44,19 @@ public class QuartzService
         ConsumerQueueJob.setDesc("数据导入任务");
         ConsumerQueueJob.setJobClz("com.titanic.quartz.job.ConsumerQueueJob");
 
+        ScheduleJob ConsumerQueueJob_2 =  new ScheduleJob();
+        ConsumerQueueJob_2.setJobId("10001" );
+        ConsumerQueueJob_2.setJobName("queue.take" );
+        ConsumerQueueJob_2.setJobGroup("queue");
+        ConsumerQueueJob_2.setJobStatus("1");
+        ConsumerQueueJob_2.setCronExpression("0/5 * * * * ?");
+        ConsumerQueueJob_2.setDesc("数据导入任务");
+        ConsumerQueueJob_2.setJobClz("com.titanic.quartz.job.ConsumerQueueJob");
+
 
         jobRun(Producerjob);
         jobRun(ConsumerQueueJob);
+        jobRun(ConsumerQueueJob_2);
 
 
 

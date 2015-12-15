@@ -11,8 +11,23 @@ import java.util.Map;
 /**
  * 内存队列管理实现 Created by wb-yangbin.d on 2015/12/5.
  */
-@Component
-public class RamBufferQueueManager implements BufferQueueManager {
+
+public class RamBufferQueueManager implements BufferQueueManager
+{
+
+	private RamBufferQueueManager()
+	{}
+
+	private static RamBufferQueueManager ramBufferQueueManager ;
+
+	public static RamBufferQueueManager getInstance()
+	{
+		if(ramBufferQueueManager == null)
+		{
+			ramBufferQueueManager = new RamBufferQueueManager();
+		}
+		return ramBufferQueueManager;
+	}
 
 	private Map<String, RamQueue<String>> mapQueue = new HashMap<String, RamQueue<String>>();
 
