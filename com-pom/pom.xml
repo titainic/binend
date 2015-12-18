@@ -41,14 +41,29 @@
         <org.json.version>20141113</org.json.version>
         <mockito-all.version>1.10.19</mockito-all.version>
         <quartz-scheduler.version>2.2.1</quartz-scheduler.version>
-
+        <camel.version>2.16.1</camel.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
 
 <dependencyManagement>
+
+
+
     <dependencies>
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-ftp</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
         <dependency>
             <groupId>yang-bin</groupId>
             <artifactId>com-quartz-cron</artifactId>
@@ -419,7 +434,7 @@
         <module>../com-web-inft</module>
         <module>../com-web-service</module>
         <module>../com-quartz-cron</module>
-        <module>../com-camel-esb</module>
+        <module>../com-camel-routes</module>
     </modules>
 
     <build>
