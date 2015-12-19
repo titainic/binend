@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:camel="http://camel.apache.org/schema/spring"
+       xsi:schemaLocation="
+          http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd" default-autowire="byName">
+
+    <bean id="blockingQueue" class="java.util.concurrent.LinkedBlockingQueue"/>
+
+    <!--<bean id="producerMassage" class="com.titanic.camel.routes.ProducerMassage"/>-->
+
+
+    <camel:camelContext id="producerContext" xmlns="http://camel.apache.org/schema/spring">
+        <endpoint id="console" uri="stream:out"/>
+        <route>
+            <from uri="seda:array?queue=#blockingQueue"/>
+            <to uri="console"/>
+        </route>
+    </camel:camelContext>
+
+</beans>

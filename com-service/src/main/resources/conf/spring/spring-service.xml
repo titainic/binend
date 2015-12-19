@@ -18,8 +18,9 @@ http://www.springframework.org/schema/task   http://www.springframework.org/sche
 
 
 	<!-- 如果要引用其他项目的spring配置，必须要先在maven中依赖其他项目-->
-	<import resource="classpath*:conf/spring/spring-quartz.xml" />
+	<!--<import resource="classpath*:conf/spring/spring-quartz.xml" />-->
 	<import resource="classpath*:conf/spring/spring-cache.xml" />
+	<import resource="classpath*:META-INF/spring/spring-camel.xml"/>
 	
 	
 
