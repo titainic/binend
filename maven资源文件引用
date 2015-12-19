@@ -1,3 +1,57 @@
 http://stonedeng.iteye.com/blog/1394882
 
 http://blog.csdn.net/jbgtwang/article/details/11253911
+
+<build>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>tbus</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<filterName>antx.properties</filterName>
+			</properties>
+			<build>
+				<filters>
+					<filter>../${filterName}</filter>
+				</filters>
+			</build>
+		</profile>
+		<profile>
+			<id>tbus-hsf</id>
+			<properties>
+				<filterName>antx-hsf.properties</filterName>
+			</properties>
+			<build>
+				<filters>
+					<filter>../${filterName}</filter>
+				</filters>
+			</build>
+		</profile>
+		<profile>
+			<id>tbus-dubbo</id>
+			<properties>
+				<filterName>antx-dubbo.properties</filterName>
+			</properties>
+			<build>
+				<filters>
+					<filter>../${filterName}</filter>
+				</filters>
+			</build>
+		</profile>
+	</profiles>
