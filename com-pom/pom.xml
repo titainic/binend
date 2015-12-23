@@ -435,6 +435,7 @@
         <module>../com-web-service</module>
         <module>../com-quartz-cron</module>
         <module>../com-camel-routes</module>
+        <module>../com-netty</module>
     </modules>
 
     <build>
