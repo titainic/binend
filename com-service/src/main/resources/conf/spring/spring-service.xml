@@ -21,7 +21,7 @@ http://www.springframework.org/schema/task   http://www.springframework.org/sche
 	<!--<import resource="classpath*:conf/spring/spring-quartz.xml" />-->
 	<import resource="classpath*:conf/spring/spring-cache.xml" />
 
-	
+
 	<!--com-cmel模块有问题 现在不使用,研究好camel之后在打开下面的注释 -->
 	<!--<import resource="classpath*:META-INF/spring/spring-camel.xml"/>-->
 	
