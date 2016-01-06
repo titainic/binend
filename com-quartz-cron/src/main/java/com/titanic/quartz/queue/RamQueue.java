@@ -10,7 +10,7 @@ import java.util.concurrent.BlockingQueue;
  * 队列实现
  * Created by wb-yangbin.d on 2015/12/5.
  */
-@Scope("prototype")
+//@Scope("prototype")
 @Component
 public class RamQueue<String> implements BufferQueue<String> {
 
