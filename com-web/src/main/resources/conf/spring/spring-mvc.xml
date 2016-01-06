@@ -59,6 +59,6 @@
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<import resource="classpath*:conf/spring/spring-web-service.xml" />
-	<context:property-placeholder location="classpath*:conf/db/*.properties" />
+	<context:property-placeholder location="classpath*:conf/db/dev/*.properties" />
 
 </beans>
