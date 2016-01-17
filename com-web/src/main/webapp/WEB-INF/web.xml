@@ -2,6 +2,11 @@
 <web-app>
 	<display-name>Archetype Created Web Application</display-name>
 
+	<context-param>
+		<param-name>defaultHtmlEscape</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
 
 
     <!-- log4j配置 -->
