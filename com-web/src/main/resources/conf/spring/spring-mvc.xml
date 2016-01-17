@@ -30,6 +30,7 @@
 		</property>
 	</bean>
 
+	<!-- 启动注解-->
 	<task:annotation-driven />
 
 	<!-- 启用AOP -->
@@ -58,7 +59,32 @@
 	<!-- 使用annotation定义事务 -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
+
+	<!--velocity 模版配置*********************************************************************** -->
+	<bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="resourceLoaderPath" value="WEB-INF/templates/"/>
+		<property name= "velocityProperties">
+			<props>
+				<prop key="input.encoding">utf-8</prop>
+				<prop key="output.encoding">utf-8</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
+		<property name="suffix" value=".vm"/>
+		<property name="contentType" value="text/html;charset=utf-8"/>
+		<property name="layoutUrl" value="layout/layout.vm" />
+		<property name="allowSessionOverride" value="true"/>
+		<property name="allowRequestOverride" value="true"/>
+		<property name="exposeSessionAttributes" value="true"/>
+		<property name="requestContextAttribute" value="rc"/>
+		<property name="exposeRequestAttributes" value="true"/>
+	</bean>
+	<!--velocity 模版配置*********************************************************************** -->
+
 	<import resource="classpath*:conf/spring/spring-web-service.xml" />
+
 	<context:property-placeholder location="classpath*:conf/db/dev/*.properties" />
 
 </beans>
