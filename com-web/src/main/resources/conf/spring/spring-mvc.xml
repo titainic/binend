@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ss="http://www.springframework.org/schema/security"
-	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:aop="http://www.springframework.org/schema/aop"
-	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:task="http://www.springframework.org/schema/task" xmlns:mvc="http://www.springframework.org/schema/mvc"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ss="http://www.springframework.org/schema/security"
+       xmlns:jee="http://www.springframework.org/schema/jee" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:task="http://www.springframework.org/schema/task" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
    	http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
    	http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd
    	 	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
@@ -15,76 +15,80 @@
    	http://www.springframework.org/schema/task   http://www.springframework.org/schema/task/spring-task-3.1.xsd  ">
 
 
-	<!-- 定时调度 -->
-	<bean
-		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+    <!-- 定时调度 -->
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 
-	<!-- Spring MVC返回json数据的方法 -->
-	<bean
-		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
-		<property name="messageConverters">
-			<list>
-				<bean
-					class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />
-			</list>
-		</property>
-	</bean>
+    <!-- Spring MVC返回json数据的方法 -->
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
+            </list>
+        </property>
+    </bean>
 
-	<!-- 启动注解-->
-	<task:annotation-driven />
+    <!-- 启动注解-->
+    <task:annotation-driven/>
 
-	<!-- 启用AOP -->
-	<aop:aspectj-autoproxy proxy-target-class="true" />
+    <!-- 启用AOP -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
 
-	<!-- 注解扫描包 -->
-	<context:component-scan base-package="com.titanic" />
+    <!-- 注解扫描包 -->
+    <context:component-scan base-package="com.titanic"/>
 
-	<!-- 开启注解 -->
-	<mvc:annotation-driven />
+    <!-- 开启注解 -->
+    <mvc:annotation-driven/>
 
     <!--视图解析 前置和后置  suffix =jsp 就返回jsp结尾的网页-->
-	<bean id="viewResolver"
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/"></property>
-		<property name="suffix" value=".jsp"></property>
-	</bean>
-	
-	<!-- 配置springMVC处理上传文件的信息 -->
-	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		 <property name="defaultEncoding" value="utf-8" />
-		<property name="maxUploadSize" value="10485760000" />
-		<property name="maxInMemorySize" value="40960" />
-  </bean>
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
 
-	<!-- 使用annotation定义事务 -->
-	<tx:annotation-driven transaction-manager="transactionManager" />
+    <!-- 配置springMVC处理上传文件的信息 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8"/>
+        <property name="maxUploadSize" value="10485760000"/>
+        <property name="maxInMemorySize" value="40960"/>
+    </bean>
+
+    <!-- 使用annotation定义事务 -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 
 
-	<!--velocity 模版配置*********************************************************************** -->
-	<bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
-		<property name="resourceLoaderPath" value="WEB-INF/templates/"/>
-		<property name= "velocityProperties">
-			<props>
-				<prop key="input.encoding">utf-8</prop>
-				<prop key="output.encoding">utf-8</prop>
-			</props>
-		</property>
-	</bean>
+    <!--velocity 模版配置*********************************************************************** -->
+    <bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
 
-	<bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
-		<property name="suffix" value=".vm"/>
-		<property name="contentType" value="text/html;charset=utf-8"/>
-		<property name="layoutUrl" value="layout/layout.vm" />
-		<property name="allowSessionOverride" value="true"/>
-		<property name="allowRequestOverride" value="true"/>
-		<property name="exposeSessionAttributes" value="true"/>
-		<property name="requestContextAttribute" value="rc"/>
-		<property name="exposeRequestAttributes" value="true"/>
-	</bean>
-	<!--velocity 模版配置*********************************************************************** -->
+                    <!-- 模板存放的路径 -->
+        <property name="resourceLoaderPath" value="WEB-INF/templates/"/>
+        <property name="velocityProperties">
+            <props>
+                <!-- Velocity配置文件 -->
+                <prop key="input.encoding">utf-8</prop>
+                <prop key="output.encoding">utf-8</prop>
+            </props>
+        </property>
+    </bean>
 
-	<import resource="classpath*:conf/spring/spring-web-service.xml" />
+    <!-- 配置视图的显示 -->
+    <bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
+        <!-- 视图文件的前缀，即存放的路径 -->
+        <property name="suffix" value=".vm"/>
+        <!--数字函数名称-->
+        <property name="contentType" value="text/html;charset=utf-8"/>
+        <!--指定默认layout文件-->
+        <property name="layoutUrl" value="layout/layout.vm"/>
+        <property name="allowSessionOverride" value="true"/>
+        <property name="allowRequestOverride" value="true"/>
+        <property name="exposeSessionAttributes" value="true"/>
+        <!--是否开放request属性-->
+        <property name="requestContextAttribute" value="rc"/>
+        <property name="exposeRequestAttributes" value="true"/>
+    </bean>
+    <!--velocity 模版配置*********************************************************************** -->
 
-	<context:property-placeholder location="classpath*:conf/db/dev/*.properties" />
+    <import resource="classpath*:conf/spring/spring-web-service.xml"/>
+
+    <context:property-placeholder location="classpath*:conf/db/dev/*.properties"/>
 
 </beans>

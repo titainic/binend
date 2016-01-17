@@ -49,6 +49,54 @@
 
 	<servlet-mapping>
 		<servlet-name>springMVC</servlet-name>
-		<url-pattern>*.do</url-pattern>
+		<!--<url-pattern>*.do</url-pattern>-->
+		<url-pattern>*.htm</url-pattern>
 	</servlet-mapping>
+
+	<!--velocity 配置 -->
+	<servlet>
+		<servlet-name>velocity</servlet-name>
+		<servlet-class>org.apache.velocity.tools.view.VelocityLayoutServlet</servlet-class>
+		<init-param>
+			<param-name>org.apache.velocity.tools.deprecationSupportMode</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<init-param>
+			<param-name>org.apache.velocity.tools.cleanConfiguration</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>org.apache.velocity.tools.userCanOverwriteTools</param-name>
+			<param-value>false</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>velocity</servlet-name>
+		<url-pattern>*.vm</url-pattern>
+	</servlet-mapping>
+	<!--velocity 配置 -->
+
+	<!--错误页面配置 -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/errors/404.html</location>
+	</error-page>
+	<error-page>
+		<error-code>401</error-code>
+		<location>/errors/401.html</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/errors/403.html</location>
+	</error-page>
+	<error-page>
+		<error-code>503</error-code>
+		<location>/errors/503.html</location>
+	</error-page>
+
+	<!--<error-page>-->
+	<!--<exception-type>java.lang.Exception</exception-type>-->
+	<!--<location>/errors/500.html</location>-->
+	<!--</error-page>-->
+
 </web-app>

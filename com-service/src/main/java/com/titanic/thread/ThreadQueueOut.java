@@ -24,7 +24,7 @@ public class ThreadQueueOut implements Runnable
             try
             {
                 String queueMsg =  blockingQueue.take();
-                System.out.println(Thread.currentThread().getName()+"  : "+queueMsg);
+//                System.out.println(Thread.currentThread().getName()+"  : "+queueMsg);
             } catch (InterruptedException e)
             {
                 e.printStackTrace();
