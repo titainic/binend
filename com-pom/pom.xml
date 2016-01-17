@@ -42,6 +42,8 @@
         <mockito-all.version>1.10.19</mockito-all.version>
         <quartz-scheduler.version>2.2.1</quartz-scheduler.version>
         <camel.version>2.16.1</camel.version>
+        <velocity.version>1.7</velocity.version>
+        <velocity-tools.version>2.0</velocity-tools.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -418,6 +420,18 @@
             <groupId>yang-bin</groupId>
             <artifactId>com-admin-service</artifactId>
             <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>${velocity.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-tools</artifactId>
+            <version>${velocity-tools.version}</version>
         </dependency>
 
     </dependencies>
