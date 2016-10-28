@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ss="http://www.springframework.org/schema/security"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:jee="http://www.springframework.org/schema/jee" xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:task="http://www.springframework.org/schema/task" xmlns:mvc="http://www.springframework.org/schema/mvc"
@@ -8,7 +8,6 @@
    	http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
    	http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd
    	 	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
-   	http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
    	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
    	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
    	http://www.springframework.org/schema/util   http://www.springframework.org/schema/util/spring-util-3.0.xsd
@@ -57,34 +56,34 @@
 
 
     <!--velocity 模版配置*********************************************************************** -->
-    <bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+    <!--<bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">-->
 
-                    <!-- 模板存放的路径 -->
-        <property name="resourceLoaderPath" value="WEB-INF/templates/"/>
-        <property name="velocityProperties">
-            <props>
-                <!-- Velocity配置文件 -->
-                <prop key="input.encoding">utf-8</prop>
-                <prop key="output.encoding">utf-8</prop>
-            </props>
-        </property>
-    </bean>
+                    <!--&lt;!&ndash; 模板存放的路径 &ndash;&gt;-->
+        <!--<property name="resourceLoaderPath" value="WEB-INF/templates/"/>-->
+        <!--<property name="velocityProperties">-->
+            <!--<props>-->
+                <!--&lt;!&ndash; Velocity配置文件 &ndash;&gt;-->
+                <!--<prop key="input.encoding">utf-8</prop>-->
+                <!--<prop key="output.encoding">utf-8</prop>-->
+            <!--</props>-->
+        <!--</property>-->
+    <!--</bean>-->
 
-    <!-- 配置视图的显示 -->
-    <bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
-        <!-- 视图文件的前缀，即存放的路径 -->
-        <property name="suffix" value=".vm"/>
-        <!--数字函数名称-->
-        <property name="contentType" value="text/html;charset=utf-8"/>
-        <!--指定默认layout文件-->
-        <property name="layoutUrl" value="layout/layout.vm"/>
-        <property name="allowSessionOverride" value="true"/>
-        <property name="allowRequestOverride" value="true"/>
-        <property name="exposeSessionAttributes" value="true"/>
-        <!--是否开放request属性-->
-        <property name="requestContextAttribute" value="rc"/>
-        <property name="exposeRequestAttributes" value="true"/>
-    </bean>
+    <!--&lt;!&ndash; 配置视图的显示 &ndash;&gt;-->
+    <!--<bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">-->
+        <!--&lt;!&ndash; 视图文件的前缀，即存放的路径 &ndash;&gt;-->
+        <!--<property name="suffix" value=".vm"/>-->
+        <!--&lt;!&ndash;数字函数名称&ndash;&gt;-->
+        <!--<property name="contentType" value="text/html;charset=utf-8"/>-->
+        <!--&lt;!&ndash;指定默认layout文件&ndash;&gt;-->
+        <!--<property name="layoutUrl" value="layout/layout.vm"/>-->
+        <!--<property name="allowSessionOverride" value="true"/>-->
+        <!--<property name="allowRequestOverride" value="true"/>-->
+        <!--<property name="exposeSessionAttributes" value="true"/>-->
+        <!--&lt;!&ndash;是否开放request属性&ndash;&gt;-->
+        <!--<property name="requestContextAttribute" value="rc"/>-->
+        <!--<property name="exposeRequestAttributes" value="true"/>-->
+    <!--</bean>-->
     <!--velocity 模版配置*********************************************************************** -->
 
     <import resource="classpath*:conf/spring/spring-web-service.xml"/>

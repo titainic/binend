@@ -1,12 +1,14 @@
 package com.titanic.test.mock;
 
 import com.titanic.service.MockService;
-import com.titanic.test.base.TestBase;
+//import com.titanic.test.base.TestBase;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.runners.MockitoJUnit44Runner;
 
 import java.util.List;
 
@@ -18,7 +20,8 @@ import static org.mockito.Mockito.when;
  *    mock 测试 http://examples.javacodegeeks.com/core-java/mockito/mockito-void-method-example/
  * mock测试
  */
-public class Mock01 extends TestBase
+@RunWith(MockitoJUnit44Runner.class)
+public class Mock01
 {
 
     @Mock

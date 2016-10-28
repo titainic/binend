@@ -2,7 +2,7 @@ package com.titanic.test.mock;
 
 import com.titanic.dao.MockDao;
 import com.titanic.service.MockService;
-import com.titanic.test.base.TestBase;
+//import com.titanic.test.base.TestBase;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

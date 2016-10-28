@@ -90,8 +90,7 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
-            <version>${mockito-all.version}</version>
-            <scope>test</scope>
+            <version>1.10.19</version>
         </dependency>
 
         <dependency>
@@ -448,8 +447,6 @@
         <module>../com-web-inft</module>
         <module>../com-web-service</module>
         <module>../com-quartz-cron</module>
-        <module>../com-camel-routes</module>
-        <module>../com-netty</module>
     </modules>
 
     <build>
