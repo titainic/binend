@@ -139,10 +139,10 @@
         </dependency>
 
         <!-- spring mvc返回json数据依赖 -->
-        <!--<dependency>-->
-            <!--<groupId>org.codehaus.jackson</groupId>-->
-            <!--<artifactId>jackson-mapper-asl</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+        </dependency>
         <!-- spring mvc返回json数据依赖 -->
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
