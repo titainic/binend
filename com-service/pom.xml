@@ -207,7 +207,8 @@
 
     </build>
 
-    <profiles>
+    <!-- 有问题-->
+    <!--<profiles>
         <profile>
             <id>dev</id>
             <activation>
@@ -223,6 +224,6 @@
                 </filters>
             </build>
         </profile>
-    </profiles>
+    </profiles>-->
 
 </project>
