@@ -1,6 +1,9 @@
 # 此项目只是技术架构，无任何业务。学习研究。和积累沉淀所写
-项目模块说明：
+## 项目模块说明：
 ![image](https://github.com/titainic/note-image/blob/master/model/web.png)
+### 使用技术:spring mvc,spring,JdbcTemplate,maven
+### 使用数据库：mysql,mongo.
+### 使用缓存：redis
 
 ## 缓存redis说明：
 ### 情况一：第一次查询是查询redis中是否有需要数据（dao层查询参数作为redis的key）如果redis存在这个key，直接返回。
@@ -10,7 +13,7 @@
 
 ### 定时任务，每天晚上12点定时删除redis缓存中的所有数据
 
-#缓存逻辑图：
+# 缓存逻辑图：
 ![image](https://github.com/titainic/note-image/blob/master/model/redis.png)
 
 # 联系方式：
