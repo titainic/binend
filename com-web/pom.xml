@@ -149,11 +149,11 @@
             <artifactId>jackson-core-asl</artifactId>
         </dependency>
         <!-- spring mvc上传下载 -->
-        <!--<dependency>-->
-            <!--<groupId>commons-fileupload</groupId>-->
-            <!--<artifactId>commons-fileupload</artifactId>-->
-        <!--</dependency>-->
-        <!-- spring mvc上传下载 -->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+        </dependency>
+         <!--spring mvc上传下载-->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
