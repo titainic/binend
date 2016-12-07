@@ -2,18 +2,16 @@ package com.titanic.dao;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.powermock.modules.junit4.PowerMockRunner;
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.stubVoid;
 import static org.mockito.Mockito.when;
 
 /**
- *mock 测试
+ *PowerMock
+ * https://my.oschina.net/u/1433482/blog/645155
  */
-@RunWith(MockitoJUnitRunner.class)
+@RunWith(PowerMockRunner.class)
 public class MockDaoImplTest
 {
     @Mock
