@@ -11,6 +11,7 @@
     <url>http://maven.apache.org</url>
 
     <properties>
+
         <project.version>1.0-SNAPSHOT</project.version>
         <springframework.version>4.0.2.RELEASE</springframework.version>
         <junit.version>4.10</junit.version>
