@@ -491,6 +491,7 @@
         <module>../com-web-inft</module>
         <module>../com-web-service</module>
         <module>../com-quartz-cron</module>
+        <module>../com-remote-spark</module>
     </modules>
 
     <build>

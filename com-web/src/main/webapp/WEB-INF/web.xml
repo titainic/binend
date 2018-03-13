@@ -54,8 +54,8 @@
 
 	<servlet-mapping>
 		<servlet-name>springMVC</servlet-name>
-		<!--<url-pattern>*.do</url-pattern>-->
-		<url-pattern>*.htm</url-pattern>
+		<url-pattern>*.do</url-pattern>
+		<!--<url-pattern>*.htm</url-pattern>-->
 	</servlet-mapping>
 
 	<!--velocity 配置 -->

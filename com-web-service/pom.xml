@@ -18,6 +18,11 @@
 
 
     <dependencies>
+        <dependency>
+            <groupId>yang-bin</groupId>
+            <artifactId>com-remote-spark</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 
         <!--PowerMock start -->
         <dependency>
