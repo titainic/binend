@@ -4,7 +4,7 @@ import org.apache.spark.deploy.SparkSubmit;
 
 /**
  * spark远程提交任务到集群Standalone模式
- *
+ * https://www.cnblogs.com/zengxiaoliang/p/6508330.html
  */
 public class SparkRemoteSubmitJob
 {
