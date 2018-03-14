@@ -47,7 +47,7 @@
         <objenesis.version>2.4</objenesis.version>
         <mockito-core.version>1.10.19</mockito-core.version>
         <powermock-module-junit4.version>1.6.3</powermock-module-junit4.version>
-        <powermock-api-mockito.version>1.6.3</powermock-api-mockito.version>
+
         <mockito-core.version>1.10.19</mockito-core.version>
         <powermock-api-mockito.version>1.6.6</powermock-api-mockito.version>
 
@@ -64,7 +64,7 @@
             <dependency>
                 <groupId>org.powermock</groupId>
                 <artifactId>powermock-api-mockito</artifactId>
-                <version>${powpowpowermockpowermock-api-mockito.versionermock-api-mockito.version}</version>
+                <version>${powermock-api-mockito.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>

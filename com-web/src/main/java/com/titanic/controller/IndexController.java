@@ -1,6 +1,6 @@
 package com.titanic.controller;
 
-import com.titanic.remote.SparkRemoteSubmitJob;
+import com.titanic.remote.SparkRemoteStandaloneSubmitJob;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,7 +18,7 @@ public class IndexController
     @RequestMapping(value = "sparkSubmit", method = { RequestMethod.GET, RequestMethod.POST })
     public String index()
     {
-        SparkRemoteSubmitJob.submitJob();
+        SparkRemoteStandaloneSubmitJob.submitStandaloneJob();
         return "index";
     }
 }

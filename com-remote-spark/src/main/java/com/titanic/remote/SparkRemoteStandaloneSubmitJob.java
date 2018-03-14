@@ -10,7 +10,7 @@ public class SparkRemoteStandaloneSubmitJob
 {
 
 
-    public static void submitJob()
+    public static void submitStandaloneJob()
     {
         String[] args = new String[]{"--master", "spark://192.9.7.68:7077",
                 "--name", "test java submit job to spark",
