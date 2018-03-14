@@ -18,7 +18,6 @@ public class WordCount
     public static void main(String[] args)
     {
         SparkConf sc = new SparkConf();
-        sc.setAppName("word_count");
 
         JavaSparkContext jsc = new JavaSparkContext(sc);
         JavaRDD<String> textFile = jsc.textFile("hdfs://192.9.7.68:8020/tmp/README.md");
