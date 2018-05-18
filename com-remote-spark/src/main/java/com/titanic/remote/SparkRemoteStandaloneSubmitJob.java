@@ -10,6 +10,9 @@ public class SparkRemoteStandaloneSubmitJob
 {
 
 
+    /**
+     * 注意　pom.xml里面的依赖
+     */
     public static void submitStandaloneJob()
     {
         String[] param = new String[] { "--master", "spark://192.9.7.68:7077",
